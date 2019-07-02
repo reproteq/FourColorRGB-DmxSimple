@@ -2,12 +2,14 @@
 ARDUINO UNO R3 + DMX SHIELD CTC-DRA-10-R2  + SPOTLIGHT RGB 4 COLORS + BUTTONS PULLUP
 
 ----------------------------------------------------------
-DMX SHIELD CTC-DRA-10-R2  jumpers switch
+DMX SHIELD CTC-DRA-10-R2  
 
-EN (run) or jump out / EN¯ (upload fw arduino)
-DE (master)
-TX-IO (gpio tx)
-RX-IO (gpio rx)
+jumpers config:
+
+EN(run) <==  EN¯ (updt fw)
+Slave    ==> DE  (master)
+TX-io   <==  TX-uart
+RX-io   <==  RX-uart
 
 Pins 2,3,4 are used to transmit DMX signals
 -----------------------------------------------------------
