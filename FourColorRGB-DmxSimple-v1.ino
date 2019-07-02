@@ -1,22 +1,17 @@
 /*
 ARDUINO UNO R3 + DMX SHIELD CTC-DRA-10-R2  + SPOTLIGHT RGB 4 COLORS + BUTTONS PULLUP
-
 ----------------------------------------------------------
 DMX SHIELD CTC-DRA-10-R2  
-
 jumpers config:
-
-EN(run) <==  EN¯ (updt fw)          ! Please For update firmware disconect battery 7-12v only usb 3.5v or arduino can dead !
+EN(run) <==  EN¯ (updt fw) ! Please For update firmware disconect battery 7-12v only usb 3.5v or arduino can dead !
 Slave   ==>  DE  (master)
 TX-io   <==  TX-uart
 RX-io   <==  RX-uart
-
 Pins 2,3,4 are used to transmit DMX signals
 xlr output to xlr input rgb
 -----------------------------------------------------------
 SPOTLIGHT RGB 4 COLORS dmx commands
 Spotlight mode dmx512 option menu D001 
-
 1 CH  TOTAL DIMMING  0-255 : 0-100%
 2 CH  TOTAL STROBE   0-2 : Reserved
                      3-191 : Pulse Strobe (Slow to Fast)
@@ -25,37 +20,29 @@ Spotlight mode dmx512 option menu D001
       SELECCTION     51-100 : Jump change
                      101-150 : Gradient
                      151-200 : Pulses
-                     201-255 : Change of voice color combination
-                    
+                     201-255 : Change of voice color combination                    
 4 CH FUNTIONAL SPEED 0-255 : (Speed is slow to fast)
 5 CH R DIMMING       0-255 : 0-100% (Linear dimming)
 6 CH G DIMMING       0-255 : 0-100% (Linear dimming)
 7 CH B DIMMING       0-255 : 0-100% (Linear dimming)
 8 CH W DIMMING       0-255 : 0-100% (Linear dimming)
-
 ---------------------------------------------------------
 Arduino buttons pullup hardware layout:
-
 5V___Button____R10k ___Gnd
-           |___Arduino gpio 0
-           
+           |___Arduino pin 5,6,7        
+                   
 pin 5,6,7 buttons 
 pin 13 led 
 --------------------------------------------------------- 
-LIBS FOR ARDUINO
-
+Library DmxSimple 
 https://github.com/PaulStoffregen/DmxSimple 
-
 */
-
-
-
 #include <DmxSimple.h>
 
-const int buttonPin1 = 5;       
-const int buttonPin2 = 6;
-const int buttonPin3 = 7;
-const int ledPin = 13;     // Pin Led push indicator
+const int buttonPin1 = 5;   // buttons    
+const int buttonPin2 = 6;   // buttons    
+const int buttonPin3 = 7;   // buttons    
+const int ledPin = 13;      // Pin Led push indicator
 
 int buttonState1 = 0; 
 int buttonState2 = 0; 
@@ -73,11 +60,7 @@ DmxSimple.usePin(4);
 DmxSimple.maxChannel(8); //my number of channels
 
 }
-
-
-
 void loop() 
-
 {
  buttonState1 = digitalRead(buttonPin1);
  buttonState2 = digitalRead(buttonPin2);
@@ -85,10 +68,10 @@ void loop()
 
     if (buttonState1 == LOW)  
       { 
-       digitalWrite(ledPin, HIGH); // probe led pin13 on    
+       digitalWrite(ledPin, HIGH); // led pin13 on    
        DmxSimple.write(3, 200);    // mode pulses
        DmxSimple.write(4, 252);    // increment speed
-       digitalWrite(ledPin, LOW);  // probe led pin13 off 
+       digitalWrite(ledPin, LOW);  // led pin13 off 
       }
 
     if (buttonState2 == LOW)  
