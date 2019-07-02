@@ -6,8 +6,8 @@ DMX SHIELD CTC-DRA-10-R2
 
 jumpers config:
 
-EN(run) <==  EN¯ (updt fw)
-Slave    ==> DE  (master)
+EN(run) <==  EN¯ (updt fw)          ! Please For update firmware disconect battery 7-12v only usb 3.5v or arduino can dead !
+Slave   ==>  DE  (master)
 TX-io   <==  TX-uart
 RX-io   <==  RX-uart
 
