@@ -12,6 +12,7 @@ RX-IO
 Pins 2,3,4 are used to transmit DMX signals
 -----------------------------------------------------------
 SPOTLIGHT RGB 4 COLORS dmx commands
+Spotlight mode dmx512 option menu D001 
 
 1 CH  TOTAL DIMMING  0-255 : 0-100%
 2 CH  TOTAL STROBE   0-2 : Reserved
@@ -28,6 +29,7 @@ SPOTLIGHT RGB 4 COLORS dmx commands
 6 CH G DIMMING       0-255 : 0-100% (Linear dimming)
 7 CH B DIMMING       0-255 : 0-100% (Linear dimming)
 8 CH W DIMMING       0-255 : 0-100% (Linear dimming)
+
 ---------------------------------------------------------
 Arduino buttons pullup hardware layout:
 
