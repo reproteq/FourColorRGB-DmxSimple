@@ -4,7 +4,7 @@ ARDUINO UNO R3 + DMX SHIELD CTC-DRA-10-R2  + SPOTLIGHT RGB 4 COLORS + BUTTONS PU
 ----------------------------------------------------------
 DMX SHIELD CTC-DRA-10-R2  jumpers switch
 
-EN (run) / EN_ (upload fw arduino)
+EN (run) or jump out / EN_ (upload fw arduino)
 DE
 TX-IO
 RX-IO
