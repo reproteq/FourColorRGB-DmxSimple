@@ -34,7 +34,7 @@ Spotlight mode dmx512 option menu D001
 Arduino buttons pullup hardware layout:
 
 5V___Button____R10k ___Gnd
-           |___Arduino Pin 0
+           |___Arduino gpio 0
 --------------------------------------------------------- 
 LIBS FOR ARDUINO
 
