@@ -12,6 +12,7 @@ TX-io   <==  TX-uart
 RX-io   <==  RX-uart
 
 Pins 2,3,4 are used to transmit DMX signals
+xlr output to xlr input rgb
 -----------------------------------------------------------
 SPOTLIGHT RGB 4 COLORS dmx commands
 Spotlight mode dmx512 option menu D001 
@@ -37,6 +38,9 @@ Arduino buttons pullup hardware layout:
 
 5V___Button____R10k ___Gnd
            |___Arduino gpio 0
+           
+pin 5,6,7 buttons 
+pin 13 led 
 --------------------------------------------------------- 
 LIBS FOR ARDUINO
 
